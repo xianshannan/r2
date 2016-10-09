@@ -1,5 +1,5 @@
 import React from 'react'
-import BasicComponent from './BasicComponent'
+import BasicComponent from 'r2-js/libs/module/BasicComponent'
 import { Link }from 'react-router'
 import Antd from 'antd'
 

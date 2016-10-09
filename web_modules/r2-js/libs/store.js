@@ -2,8 +2,8 @@ import { createStore, applyMiddleware } from 'redux'
 import thunkMiddleware from 'redux-thunk'
 import { routerMiddleware } from 'react-router-redux'
 import createLogger from 'redux-logger'
-import rootReducer from './reducers'
-export default function configureStore(initialState,browserHistory) {
+
+export default function configureStore(initialState,browserHistory,rootReducer) {
   let middleware = [thunkMiddleware];
   //下面这句话，必须设置，要不push没用
   const router = routerMiddleware(browserHistory)

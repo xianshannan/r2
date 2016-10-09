@@ -1,5 +1,11 @@
 ### Update Lists
 
+### v0.0.5
+
+`2016-10-08`
+
+- webpack配置更新
+
 ### v0.0.4
 `2016-09-08`
 - `Fixed` layout中.child_routes.js文件不自动生成问题 

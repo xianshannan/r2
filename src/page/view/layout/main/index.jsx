@@ -1,5 +1,5 @@
 import React from 'react'
-import Component from 'r2/module/ModuleComponent'
+import Component from 'src/libs/ModuleComponent'
 import { connect } from 'react-redux'
 import Antd from 'antd'
 import { Menu } from 'antd'
@@ -11,29 +11,6 @@ require('css/main.scss')
 class View extends Component {
   constructor(props){
     super(props); 
-  }
-
-  componentDidMount(){
-    var _this = this;
-  }
-
-  componentWillUnmount(){
-  }
-  /**
-   *  数据处理与适配
-   */
-  dataAdapter(){
-    var _this = this;
-    return {
-    }
-  }
-  /**
-   *  事件处理
-   */
-  events(){
-    var _this = this;
-    return{
-    }
   }
 
   render() {

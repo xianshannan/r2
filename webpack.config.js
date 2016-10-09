@@ -77,13 +77,10 @@ var config = {
   },
   resolve: {
     alias: {
-      'r2': path.resolve(__dirname,'src/libs/r2'),
-      '.end': path.resolve(__dirname,'.end'),
       'src': path.resolve(__dirname,'src'),
       'css': path.resolve(__dirname,'style/css'),
       'img': path.resolve(__dirname,'style/img'),
       'page': path.resolve(__dirname,'src/page'),
-      'libs': path.resolve(__dirname,'src/libs'),
       'common': path.resolve(__dirname,'src/common'),
     }, 
     extensions: ['', '.js', '.jsx']

@@ -1,5 +1,5 @@
 import React from 'react'
-import Component from 'r2/module/ModuleComponent'
+import Component from 'src/libs/ModuleComponent'
 import { connect } from 'react-redux'
 import * as Antd from 'antd'
 
@@ -8,25 +8,7 @@ class View extends Component {
   constructor(props){
     super(props); 
   }
-  componentDidMount(){
-    var _this = this;
-  }
-  /**
-   *  数据处理与适配
-   */
-  dataAdapter(){
-    var _this = this;
-    return {
-    }
-  }
-  /**
-   *  事件处理
-   */
-  events(){
-    var _this = this;
-    return{
-    }
-  }
+  
   render() {
     super.render();
     var _this = this;

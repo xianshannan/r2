@@ -11,7 +11,7 @@ module.exports = function(grunt) {
         options: {
           mode: 'zip',
 					archive: function(){
-						return 'publish-' + grunt.template.today('yyyymmddHHMMss') + '.zip';
+						return './public/publish-' + grunt.template.today('yyyymmddHHMMss') + '.zip';
 					}
         },
         expand: true,

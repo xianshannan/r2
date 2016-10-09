@@ -9,5 +9,5 @@ window.r2fetch = function(option){
 };
 
 //公共Redux actionCreator
-var r2CommonActionCreator = require("r2/actionCreator")
+var r2CommonActionCreator = require("r2-js/libs/actionCreator")
 window.r2ActionCreator = Object.assign({},r2CommonActionCreator,require('src/page/action'));

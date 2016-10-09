@@ -29,6 +29,6 @@ var reducer = {
   routing: immutableReducer
 }
 
-export default reducer
+export default combineReducers(reducer);
 
 

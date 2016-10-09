@@ -3,7 +3,7 @@ import deprecate from 'core-decorators/lib/deprecate';
 import fetch from 'isomorphic-fetch'
 import { push } from 'react-router-redux'
 import * as Antd from 'antd'
-import BasicFetch from 'r2/fetch/BasicFetch'
+import BasicFetch from 'r2-js/libs/fetch/BasicFetch'
 /**
  * 针对当前项目fetch封装 
  */

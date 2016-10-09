@@ -1,4 +1,4 @@
-import fn from "r2/function"
+import fn from "r2-js/libs/function"
 var output = {
   /**
    * antdTabelFieldBind Antd Table 简易键值绑定
