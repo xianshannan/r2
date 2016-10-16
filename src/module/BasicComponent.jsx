@@ -1,5 +1,4 @@
 import React from 'react'
-import { is } from 'immutable'
 /**
  *  此类规范化数据处理，事件绑定位置。数据处理类函数需要定义在类方法dataAdapter中，绑定事件需要统一在
  *  events中,动作统一在actions中，调用dataAdapter，events,actions中的方法直接在使用this就可以访问到。需要注意,当集成此类需要,在新建react组件
@@ -40,27 +39,31 @@ class BasicComponent extends React.Component {
   }
 
   shouldComponentUpdate(nextProps = {}, nextState = {}){
-    const thisProps = this.props || {},
-      thisState = this.state || {};
+    if(useImmutable) {
+      var is = require('immutable').is;
+      const thisProps = this.props || {},
+        thisState = this.state || {};
 
-    if (Object.keys(thisProps).length !== Object.keys(nextProps).length ||
-      Object.keys(thisState).length !== Object.keys(nextState).length) {
-      return true;
-    }
-
-    for (const key in nextProps) {
-      if (thisProps[key] !== nextProps[key] || !is(thisProps[key], nextProps[key])) {
-    //console.debug(thisProps[key],nextProps[key])
-      return true;
+      if (Object.keys(thisProps).length !== Object.keys(nextProps).length ||
+        Object.keys(thisState).length !== Object.keys(nextState).length) {
+        return true;
       }
-    }
 
-    for (const key in nextState) {
-      if (thisState[key] !== nextState[key] || !is(thisState[key], nextState[key])) {
-      return true;
+      for (const key in nextProps) {
+        if (thisProps[key] !== nextProps[key] || !is(thisProps[key], nextProps[key])) {
+      //console.debug(thisProps[key],nextProps[key])
+        return true;
+        }
       }
+
+      for (const key in nextState) {
+        if (thisState[key] !== nextState[key] || !is(thisState[key], nextState[key])) {
+        return true;
+        }
+      }
+      return false;
     }
-    return false;
+    return true;
   }
 
   bindFunctions(){

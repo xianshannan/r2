@@ -1,5 +1,7 @@
-import Immutable from 'immutable'
-import { is } from 'immutable'
+if(useImmutable){
+  var Immutable = require('immutable');
+  var is = Immutable.is;
+}
 var fn = {
   /**
   * 根据传进来的Imutable数据,判断是否更新React组件
