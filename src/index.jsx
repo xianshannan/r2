@@ -3,7 +3,7 @@ import { syncHistoryWithStore } from 'react-router-redux'
 import { browserHistory } from 'react-router'
 //公共方法||类载入，用window对象访问
 import configureStore from './store'
-import container from './container'
+import Container from './container'
 
 function index(routes,reducers){
   if(useImmutable) {
@@ -22,7 +22,7 @@ function index(routes,reducers){
       }
     } 
   }); 
-  function renderApp(Container) {
+  function renderApp() {
     const target = document.getElementById('app_container');
     if (target) {
       render(
@@ -32,14 +32,7 @@ function index(routes,reducers){
     }
   }
 
-  renderApp(container);
-
-  if (module.hot) {
-    module.hot.accept(
-      './container',
-      () => renderApp(require('./container'))
-    );
-  }
+  return renderApp; 
 }
 
 module.exports = index;

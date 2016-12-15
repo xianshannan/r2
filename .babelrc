@@ -1,14 +1,22 @@
 {
-	"presets": ["react", "es2015","stage-0"],
 	"plugins": [
 		"transform-decorators-legacy",
-		["import", [{ "libraryName": "antd", "style": "css" }]],
 	],
-	"env": {
-		"development": {
-			plugins: [
-				"react-hot-loader/babel",
-			]
+  "env": {
+		"default": {
+      "presets": [
+        "react", 
+        "es2015",
+        "stage-0"
+      ],
+		},
+		"es": {
+      "presets": [
+        "react", 
+        ["es2015",{ "modules": false }],
+        "stage-0"
+      ],
 		}
 	}
 }
+
