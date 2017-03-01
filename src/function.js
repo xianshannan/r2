@@ -64,4 +64,4 @@ var fn = {
     return str;
   }
 }
-module.exports = fn;
+export default fn;

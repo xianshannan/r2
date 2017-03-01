@@ -204,4 +204,4 @@ class BasicFetch {
   }
 }
 
-module.exports = BasicFetch; 
+export default BasicFetch;

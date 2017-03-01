@@ -1,3 +1,4 @@
+import React from 'react'
 import { render } from 'react-dom'
 import { syncHistoryWithStore } from 'react-router-redux' 
 import { browserHistory } from 'react-router'
@@ -35,4 +36,4 @@ function index(routes,reducers){
   return renderApp; 
 }
 
-module.exports = index;
+export default index;

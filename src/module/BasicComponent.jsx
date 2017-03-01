@@ -94,4 +94,4 @@ class BasicComponent extends React.Component {
   }
 }
 
-module.exports = BasicComponent
+export default BasicComponent;

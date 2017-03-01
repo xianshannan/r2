@@ -1,6 +1,6 @@
 {
   "name": "r2-js",
-  "version": "0.0.14",
+  "version": "0.0.15",
   "description": "r2",
   "devDependencies": {
     "babel-cli": "^6.18.0",
